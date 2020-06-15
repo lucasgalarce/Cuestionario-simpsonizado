@@ -15,35 +15,46 @@
     <h2>Cuestionario sobre Los Simpsons</h2>
 
     <form action="">
+
         <p>Ingresar nombre y apellido (por lo menos 3 caracteres)</p>
         <input type="text" placeholder="Nombre" id="nombre">
         <input type="text" placeholder="Apellido" id="apellido">
 
-        <!-- PREGUNTA 1 INICIO -->
-        <p>
-            <label for="preg1">¿Cual es el 2do nombre de Homero?</label>
-        </p>
 
+        <!-- PREGUNTA 1 INICIO -->
         <div>
-            <input type="radio" name="preg1" value="1"> <span>Jack</span>
-            <input type="radio" name="preg1" value="2"> <span>Jay</span>
-            <input type="radio" name="preg1" value="3"> <span>Jak</span>
-            <input type="radio" name="preg1" value="4"> <span>Jai</span>
+            <p>
+                <label for="preg1" id="preg1">¿Cual es el 2do nombre de Homero?</label>
+            </p>
+
+            <img src="/img/Homero.jpg" width="300px" alt="">
+
+            <div>
+                <input type="radio" name="preg1"> <span>Jack</span>
+                <input type="radio" name="preg1" id="rta1"> <span>Jay</span>
+                <input type="radio" name="preg1"> <span>Jak</span>
+                <input type="radio" name="preg1"> <span>Jai</span>
+            </div>
+
         </div>
 
         <!-- PREGUNTA 1 FIN -->
 
         <!-- PREGUNTA 2 INICIO -->
-
-        <p>
-            <label for="preg2">¿De qué color son los ojos de marge?</label>
-        </p>
-
         <div>
-            <input type="radio" name="preg2" value="1"> <span>marrones</span>
-            <input type="radio" name="preg2" value="2"> <span>marron claritos</span>
-            <input type="radio" name="preg2" value="3"> <span>avellana</span>
-            <input type="radio" name="preg2" value="4"> <span>verdes</span>
+            <p>
+                <label for="preg2" id="preg2">¿De qué color son los ojos de marge?</label>
+            </p>
+
+            <img src="/img/marge.jpg" width="300px" alt="">
+
+            <div>
+                <input type="radio" name="preg2"> <span>marrones</span>
+                <input type="radio" name="preg2"> <span>marron claritos</span>
+                <input type="radio" name="preg2" id="rta2"> <span>avellana</span>
+                <input type="radio" name="preg2"> <span>verdes</span>
+            </div>
+
         </div>
 
         <!-- PREGUNTA 2 FIN -->
