@@ -8,7 +8,16 @@ const preg1 = document.getElementById('preg1');
 const rta1 = document.getElementById('rta1');
 const preg2 = document.getElementById('preg2');
 const rta2 = document.getElementById('rta2');
-
+const preg3 = document.getElementById('preg3');
+const rta3 = document.getElementById('rta3');
+const preg4 = document.getElementById('preg4');
+const rta4 = document.getElementById('rta4');
+const preg5 = document.getElementById('preg5');
+const rta5 = document.getElementById('rta5');
+const preg6 = document.getElementById('preg6');
+const rta6 = document.getElementById('rta6');
+const preg7 = document.getElementById('preg7');
+const rta7 = document.getElementById('rta7');
 
 btn.addEventListener('click', (ev) => {
     ev.preventDefault();
@@ -51,6 +60,60 @@ btn.addEventListener('click', (ev) => {
         preg2.style.color = "red";
     }
 
+    // Pregunta 3
 
+    if (rta3.checked) {
+        total += 10
+        preg3.style.color = "green";
+
+    } else {
+        preg3.style.color = "red";
+    }
+
+    // Pregunta 4
+
+    if (rta4.checked) {
+        total += 10
+        preg4.style.color = "green";
+
+    } else {
+        preg4.style.color = "red";
+    }
+
+    // Pregunta 5
+
+    if (rta5.checked) {
+        total += 10
+        preg5.style.color = "green";
+
+    } else {
+        preg5.style.color = "red";
+    }
+
+    // Pregunta 6
+    console.log(rta6.value)
+
+
+    if (rta6.value.toLowerCase() == 'abraham') {
+        total += 10
+        preg6.style.color = "green";
+        rta6.style.border = "1px solid green"
+
+    } else {
+        preg6.style.color = "red";
+        rta6.style.border = "1px solid red"
+    }
+
+    // Pregunta 7
+
+    if (rta7.checked) {
+        total += 10
+        preg7.style.color = "green";
+
+    } else {
+        preg7.style.color = "red";
+    }
+
+    console.log(total)
 
 });
