@@ -18,6 +18,18 @@ const preg6 = document.getElementById('preg6');
 const rta6 = document.getElementById('rta6');
 const preg7 = document.getElementById('preg7');
 const rta7 = document.getElementById('rta7');
+const preg8 = document.getElementById('preg8');
+const rta8 = document.getElementById('rta8');
+const preg9 = document.getElementById('preg9');
+const rta9opc1 = document.getElementById('rta9opc1');
+const rta9opc2 = document.getElementById('rta9opc2');
+const rta9opc3 = document.getElementById('rta9opc3');
+const rta9opc4 = document.getElementById('rta9opc4');
+const preg10 = document.getElementById('preg10');
+const rta10 = document.getElementById('rta10');
+
+
+
 
 btn.addEventListener('click', (ev) => {
     ev.preventDefault();
@@ -114,6 +126,41 @@ btn.addEventListener('click', (ev) => {
         preg7.style.color = "red";
     }
 
-    console.log(total)
+    // Pregunta 8
+
+    if (rta8.value.toLowerCase() == 'max power') {
+        total += 10
+        preg8.style.color = "green";
+        rta8.style.border = "2px solid green"
+
+    } else {
+        preg8.style.color = "red";
+        rta8.style.border = "2px solid red"
+    }
+
+    // Pregunta 9
+
+    if (rta9opc1.checked && !rta9opc2.checked && rta9opc3.checked && rta9opc4.checked) {
+        total += 10
+        preg9.style.color = "green";
+
+    } else {
+        preg9.style.color = "red";
+    }
+
+    // Pregunta 10
+
+    if (rta10.checked) {
+        total += 10
+        preg10.style.color = "green";
+
+    } else {
+        preg10.style.color = "red";
+    }
+
+
+    console.log(`${nombre.value} ${apellido.value} has obtenido una puntuacion de ${total}`)
 
 });
+
+
