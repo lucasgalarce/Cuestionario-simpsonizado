@@ -36,7 +36,9 @@ const result = document.getElementById('result');
 btn.addEventListener('click', (ev) => {
     ev.preventDefault();
 
+    // Reinicio total
     total = 0;
+
     // Validaciones
 
     // Nombre
@@ -161,9 +163,8 @@ btn.addEventListener('click', (ev) => {
         preg10.style.color = "red";
     }
 
-    // Limpio result y reinicio total
+    // Limpio result
     result.innerHTML = "";
-
 
     // Creo dos nuevos elemento p
     const newP = document.createElement("p");
@@ -187,17 +188,17 @@ btn.addEventListener('click', (ev) => {
 
     // Evaluo que puntuacion saco para darle un estilado y mensaje personalizado
     if (total <= 40) {
-        result.classList.add("desaprobado");
+        result.className = "desaprobado";
         newP2.innerHTML = `Aun te falta mucho para ser un experto`;
         result.appendChild(imgDesaprobado);
 
     } else if (total <= 79) {
-        result.classList.add("aprobado");
+        result.className = "aprobado";
         newP2.innerHTML = `Casi eres un experto`;
         result.appendChild(imgAprobado);
 
     } else if (total >= 80) {
-        result.classList.add("sobresaliente");
+        result.className = "sobresaliente";
         newP2.innerHTML = `¡Sos intelectual, muy inteligente!`;
         result.appendChild(imgSobresaliente);
     }
