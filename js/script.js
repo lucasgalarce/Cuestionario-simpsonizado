@@ -2,7 +2,7 @@ const btn = document.getElementById('enviar');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById('apellido');
 
-let total = 0;
+let total;
 
 const preg1 = document.getElementById('preg1');
 const rta1 = document.getElementById('rta1');
@@ -28,12 +28,15 @@ const rta9opc4 = document.getElementById('rta9opc4');
 const preg10 = document.getElementById('preg10');
 const rta10 = document.getElementById('rta10');
 
+const result = document.getElementById('result');
+
 
 
 
 btn.addEventListener('click', (ev) => {
     ev.preventDefault();
 
+    total = 0;
     // Validaciones
 
     // Nombre
@@ -158,8 +161,50 @@ btn.addEventListener('click', (ev) => {
         preg10.style.color = "red";
     }
 
+    // Limpio result y reinicio total
+    result.innerHTML = "";
 
-    console.log(`${nombre.value} ${apellido.value} has obtenido una puntuacion de ${total}`)
+
+    // Creo dos nuevos elemento p
+    const newP = document.createElement("p");
+    const newP2 = document.createElement("p");
+
+    // Creo imagen para la clase desaprobado
+    const imgDesaprobado = document.createElement('img');
+    imgDesaprobado.src = "/img/desaprobado.jpg"
+
+    // Creo imagen para la clase aprobado
+    const imgAprobado = document.createElement('img');
+    imgAprobado.src = "/img/aprobado.jpg"
+
+    // Creo imagen para la clase sobresaliente
+    const imgSobresaliente = document.createElement('img');
+    imgSobresaliente.src = "/img/sobresaliente.jpg"
+
+
+    // Inserto el nuevo elemento p en el div result que esta en nuestro html.
+    newP.innerHTML = `${nombre.value} ${apellido.value} Has obtenido una puntuacion de ${total}`;
+
+    // Evaluo que puntuacion saco para darle un estilado y mensaje personalizado
+    if (total <= 40) {
+        result.classList.add("desaprobado");
+        newP2.innerHTML = `Aun te falta mucho para ser un experto`;
+        result.appendChild(imgDesaprobado);
+
+    } else if (total <= 70) {
+        result.classList.add("aprobado");
+        newP2.innerHTML = `Casi eres un experto`;
+        result.appendChild(imgAprobado);
+
+    } else if (total == 100) {
+        result.classList.add("sobresaliente");
+        newP2.innerHTML = `¡Sos intelectual, muy inteligente!`;
+        result.appendChild(imgSobresaliente);
+    }
+
+    // Agrego los parrafos 
+    result.appendChild(newP)
+    result.appendChild(newP2)
 
 });
 
