@@ -171,15 +171,15 @@ btn.addEventListener('click', (ev) => {
 
     // Creo imagen para la clase desaprobado
     const imgDesaprobado = document.createElement('img');
-    imgDesaprobado.src = "/img/desaprobado.jpg"
+    imgDesaprobado.src = "img/desaprobado.jpg"
 
     // Creo imagen para la clase aprobado
     const imgAprobado = document.createElement('img');
-    imgAprobado.src = "/img/aprobado.jpg"
+    imgAprobado.src = "img/aprobado.jpg"
 
     // Creo imagen para la clase sobresaliente
     const imgSobresaliente = document.createElement('img');
-    imgSobresaliente.src = "/img/sobresaliente.jpg"
+    imgSobresaliente.src = "img/sobresaliente.jpg"
 
 
     // Inserto el nuevo elemento p en el div result que esta en nuestro html.
