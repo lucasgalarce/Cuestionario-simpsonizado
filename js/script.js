@@ -191,12 +191,12 @@ btn.addEventListener('click', (ev) => {
         newP2.innerHTML = `Aun te falta mucho para ser un experto`;
         result.appendChild(imgDesaprobado);
 
-    } else if (total <= 70) {
+    } else if (total <= 79) {
         result.classList.add("aprobado");
         newP2.innerHTML = `Casi eres un experto`;
         result.appendChild(imgAprobado);
 
-    } else if (total == 100) {
+    } else if (total >= 80) {
         result.classList.add("sobresaliente");
         newP2.innerHTML = `¡Sos intelectual, muy inteligente!`;
         result.appendChild(imgSobresaliente);
