@@ -2,8 +2,6 @@ const btn = document.getElementById('enviar');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById('apellido');
 
-let total;
-
 const preg1 = document.getElementById('preg1');
 const rta1 = document.getElementById('rta1');
 const preg2 = document.getElementById('preg2');
@@ -29,8 +27,7 @@ const preg10 = document.getElementById('preg10');
 const rta10 = document.getElementById('rta10');
 
 const result = document.getElementById('result');
-
-
+let total;
 
 
 btn.addEventListener('click', (ev) => {
@@ -182,7 +179,6 @@ btn.addEventListener('click', (ev) => {
     const imgSobresaliente = document.createElement('img');
     imgSobresaliente.src = "img/sobresaliente.jpg"
 
-
     // Inserto el nuevo elemento p en el div result que esta en nuestro html.
     newP.innerHTML = `${nombre.value} ${apellido.value} Has obtenido una puntuacion de ${total}`;
 
@@ -208,5 +204,3 @@ btn.addEventListener('click', (ev) => {
     result.appendChild(newP2)
 
 });
-
-
